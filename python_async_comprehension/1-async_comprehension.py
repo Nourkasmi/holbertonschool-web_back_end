@@ -2,7 +2,7 @@
 """This module defines an async comprehension that collects random numbers from an async generator."""
 
 from typing import List
-from .0-async_generator import async_generator
+from async_generator import async_generator
 
 
 async def async_comprehension() -> List[float]:
