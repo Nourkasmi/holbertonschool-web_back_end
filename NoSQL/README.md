@@ -1,50 +1,43 @@
-# NoSQL - MongoDB Scripts
+# MongoDB Scripts
 
 This directory contains MongoDB scripts for database operations.
 
-## Files
+## Scripts
 
 ### 0-list_databases
-A script that lists all databases in MongoDB.
+Lists all databases in the MongoDB server.
+
+Usage:
 ```bash
-./0-list_databases | mongo
+./0-list_databases
 ```
+
 Example output:
 ```
-MongoDB shell version v3.6.3
-connecting to: mongodb://127.0.0.1:27017
-MongoDB server version: 3.6.3
-admin        0.000GB
-config       0.000GB
-local        0.000GB
-logs         0.005GB
-bye
+admin   0.000GB
+config  0.000GB
+local   0.000GB
 ```
 
 ### 1-use_or_create_database
-A script that creates or uses the database `my_db`.
+Creates or switches to a database named `my_db`.
+
+Usage:
 ```bash
-./1-use_or_create_database | mongo
+./1-use_or_create_database
 ```
+
 Example output:
 ```
-MongoDB shell version v3.6.3
-connecting to: mongodb://127.0.0.1:27017
-MongoDB server version: 3.6.3
 switched to db my_db
-bye
 ```
 
 ## Requirements
-- MongoDB server (version 3.6.3 or higher)
-- MongoDB shell
-- Ubuntu 20.04 LTS
 
-## Usage
-All scripts are executable and can be run directly with the MongoDB shell:
-```bash
-./script_name | mongo
-```
+- MongoDB server must be running
+- Scripts must be executable (`chmod +x script_name`)
+- Scripts must use the correct MongoDB comment format (`// comment`)
+- Scripts must have a shebang line (`#!/usr/bin/env mongo`)
 
 ## Author
 Nour Kasmi 

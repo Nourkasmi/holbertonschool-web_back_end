@@ -1,2 +1,3 @@
 #!/usr/bin/env mongo
+// Use or create a database named my_db
 use my_db 
