@@ -45,7 +45,7 @@ class StudentsController {
         res.status(200).send(`List: ${students.join(', ')}`);
       })
       .catch(() => {
-        res.status(500).send('Cannot load the database');
+        res.status(500).send('Cannot load the database'); // ✅ Corrigé ici (pas de préfixe)
       });
   }
 }
