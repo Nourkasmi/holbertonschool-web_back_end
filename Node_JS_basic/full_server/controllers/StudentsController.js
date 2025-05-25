@@ -7,12 +7,14 @@ class StudentsController {
     readDatabase(path)
       .then((data) => {
         const lines = ['This is the list of our students'];
-
         const fields = Object.keys(data).sort();
-        fields.forEach((field) => {
+
+        for (const field of fields) {
           const list = data[field].join(', ');
-          lines.push(`Number of students in ${field}: ${data[field].length}. List: ${list}`);
-        });
+          lines.push(
+            `Number of students in ${field}: ${data[field].length}. List: ${list}`,
+          );
+        }
 
         res.status(200).send(lines.join('\n'));
       })
