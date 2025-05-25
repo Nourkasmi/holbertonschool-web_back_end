@@ -56,7 +56,9 @@ app.get('/students', (req, res) => {
       res.status(200).send(output);
     })
     .catch(() => {
-      res.status(500).send('Cannot load the database');
+      res
+        .status(500)
+        .send('This is the list of our students\nCannot load the database');
     });
 });
 
