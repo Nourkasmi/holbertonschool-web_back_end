@@ -31,6 +31,7 @@ function countStudents(path) {
       }
 
       const output = [];
+      output.push('This is the list of our students');
       output.push(`Number of students: ${totalStudents}`);
       for (const [field, students] of Object.entries(studentsByField)) {
         output.push(
@@ -49,10 +50,10 @@ app.get('/', (req, res) => {
 
 app.get('/students', (req, res) => {
   const databasePath = process.argv[2];
-  res.write('This is the list of our students\n');
+
   countStudents(databasePath)
     .then((output) => {
-      res.end(`${output}\n`);
+      res.status(200).send(output);
     })
     .catch(() => {
       res.status(500).send('Cannot load the database');
