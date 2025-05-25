@@ -32,8 +32,8 @@ function countStudents(path) {
       linesToPrint.push(`Number of students: ${totalStudents}`);
       for (const [field, students] of Object.entries(studentsByField)) {
         linesToPrint.push(
-          `Number of students in ${field}: ${students.length}. List: ${students.join(', ')}`
-        );
+          `Number of students in ${field}: ${students.length}. List: ${students.join(', ')}`,
+        ); // ✅ virgule ajoutée ici (ligne 35)
       }
 
       resolve(linesToPrint.join('\n'));
